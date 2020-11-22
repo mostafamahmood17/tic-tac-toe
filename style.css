@@ -1,0 +1,55 @@
+body {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 300px;
+    margin: auto;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
+}
+
+#player-one{
+    font-size: 25px;
+}
+
+#player-two{
+    font-size: 25px;
+}
+
+#zero{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#one{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#two{
+    border-bottom: 1px solid black;
+}
+#three{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#four{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#five{
+    border-bottom: 1px solid black;
+}
+
+#six{
+    border-right: 1px solid black;
+}
+#seven{
+    border-right: 1px solid black;
+}

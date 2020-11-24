@@ -2,8 +2,8 @@ const status = document.getElementById('status');
 const pOne = document.getElementById('player-one');
 const pTwo = document.getElementById('player-two');
 pOne.style.color = "green";
-pOne.innerHTML="=>Player one"
-pTwo.innerHTML="Player two"
+pOne.innerHTML = "=>Player one"
+pTwo.innerHTML = "Player two"
 pTwo.style.color = "red";
 
 
@@ -31,48 +31,53 @@ const handleBlockPlayed = (clickedBlock, blockIndex) => {
 }
 const handlePlayerChange = () => {
     playerOne = playerOne === "X" ? "O" : "X";
-    
-    if( playerOne=== "X"){
+
+    if (playerOne === "X") {
         pOne.style.color = "green";
-        pOne.innerHTML="=>Player one"
-        pTwo.innerHTML="Player two"
+        pOne.innerHTML = "=>Player one"
+        pTwo.innerHTML = "Player two"
         pTwo.style.color = "red";
-    }else if(playerOne === "O"){
+    } else if (playerOne === "O") {
         pOne.style.color = "red";
         pTwo.style.color = "green";
-        pTwo.innerHTML="=>Player two"
-        pOne.innerHTML="Player one"
+        pTwo.innerHTML = "=>Player two"
+        pOne.innerHTML = "Player one"
     }
 
 
 }
 const handleResultValidation = () => {
     let gameWon = false
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 8; i++) {
         const winCondition = winningConditions[i];
         let x = current[winCondition[0]];
         let y = current[winCondition[1]];
         let z = current[winCondition[2]];
+        console.log(x, y, z);
+        console.log(winCondition[0])
         if (x === '' || y === '' || z === '') {
             continue;
         }
         if (x === y && y === z) {
             gameWon = true;
-            
-            
+            // if(winCondition === winningConditions[0]){
+            //     document.getElementById("vLine").classList.add("oneLine");
+            // }else if(winCondition === winningConditions[2]){
+            //     document.getElementById("vLine").classList.add("rLine");
+            // }
             break
         }
     }
     if (gameWon) {
         status.innerHTML = winner();
-        active = false; 
-       return;
+        active = false;
+        return;
     }
     let gameDraw = !current.includes("");
     if (gameDraw) {
         status.innerHTML = draw();
         active = false;
-        
+
         return;
     }
     handlePlayerChange();
@@ -93,10 +98,8 @@ const handleRestart = () => {
     playerOne = "X";
     current = ["", "", "", "", "", "", "", "", ""];
     document.querySelectorAll(".block").forEach(block => block.innerHTML = "");
-    document.getElementById("zero").style.color="black";
-    document.getElementById("one").style.color="black";
-    document.getElementById("two").style.color="black";
-  
+    status.innerHTML = ' ';
+
 
 }
 

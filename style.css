@@ -53,3 +53,44 @@ body {
 #seven{
     border-right: 1px solid black;
 }
+/* .oneLine {
+    border-top: 6px solid black;
+    width: 300px;
+    position: absolute;
+    
+    display:flex;
+    justify-content:center;
+
+   left:50%;
+    margin-top: 6px;
+    bottom: 50px;
+    z-index:-50;
+  }
+
+.gLine {
+    border-left: 6px solid black;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+
+    margin-left: -3px;
+    top: 50;
+    z-index:-50;
+  }
+  .rLine {
+    border-left: 6px solid black;
+    height: 300px;
+    position: absolute;
+    left: 31%;
+    margin-left: -3px;
+    top: 50;
+    z-index:-50;
+  }
+  .rel{
+    position: relative;
+    
+    
+     
+  } */
+
+
